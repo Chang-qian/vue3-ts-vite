@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    // 目标代码(ts -> js(es5/6/7))
+    "target": "esnext",
+    // 目标代码需要使用的模块化方案(commonjs require/module.exports/es module import/export)
+    "module": "esnext",
+    // 严格一些严格的检查(any)
+    "strict": true,
+    // 对jsx进行怎么样的处理
+    "jsx": "preserve",
+    // 按照node的方式去解析模块 import "/index.node"
+    "moduleResolution": "node",
+    // 文件路径在解析时, 基本url
+    "baseUrl": "./",
+    // 路径解析(类似于webpack alias)
+    "paths": {
+      "@/*": ["./src/*"],
+      "components/*": ["src/components/*"]
+    },
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true,
+    "allowSyntheticDefaultImports": true,
+    "types": ["vite/client"]
+  },
+  "include": ["src/**/*.ts", "src/**/*.vue"],
+  "exclude": ["node_modules", "src/track/buryScript.ts"]
+}
